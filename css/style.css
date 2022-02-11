@@ -492,6 +492,9 @@ a {
   margin-bottom: 20px;
 }
 
+.footer-adress {
+  flex-grow: 1;
+}
 .footer-list {
   display: inline-block;
 }
@@ -543,7 +546,7 @@ a {
 
 .join-title {
   font-size: 14px;
-  line-height: 1.14x;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -579,6 +582,71 @@ a {
   fill: currentColor;
 }
 
+.footer-form {
+  margin-left: 93px;
+  display: block;
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.subscription input {
+  min-width: 358px;
+  height: 50px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+}
+
+.subscription button {
+  display: flex;
+  min-width: 200px;
+  margin-left: auto;
+  height: 50px;
+  margin-left: 12px;
+  padding: 10px 28px;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.footer-button-icon {
+  margin-left: 10px;
+}
+
+.subscription input:focus {
+  border: 1px solid #2196f3;
+}
+
 /* ----Modal Window---- */
 
 .backdrop {
@@ -594,10 +662,11 @@ a {
 
 .modal {
   position: absolute;
-  width: 530px;
-  height: 580px;
+  min-width: 530px;
+  min-height: 580px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
   background-color: #ffffff;
   border-radius: 4px;
@@ -618,6 +687,128 @@ a {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-color-text);
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 40px;
+  outline: none;
+}
+
+.modal-input:focus,
+.user-comments:focus {
+  border: 1px solid #2196f3;
+}
+
+.modal-input:focus + .modal-icon {
+  fill: #2196f3;
+}
+
+.modal-input-icon {
+  position: relative;
+}
+
+.modal-icon {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.user-comments {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.checkbox-text {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-text span {
+  display: flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-check:checked + .checkbox-text > span {
+  background-color: var(--accent-coolor);
+  border: none;
+}
+
+.modal-check {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.modal-form-link {
+  color: var(--accent-coolor);
+  text-decoration-line: underline;
+  /* margin-left: 5px; заменен мнемокодом &nbsp;*/
+}
+
+.modal-form-button {
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--accent-coolor);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
 }
 
 .backdrop.is-hidden {
